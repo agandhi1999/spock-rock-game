@@ -4,13 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Spock Rock</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Script -->
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>Rock Paper Scissors Lizard Spock</h1>
+        <div class="game-container">
+            <!-- Player Section -->
+            <div class="player">
+                <span>You - </span>
+                <span id="player-score">0</span>
+                <span id="player-hyphens" hidden>---</span>
+                <span id="player-selected" hidden></span>
+            </div>
+            <div class="player-item">
+                <span><i class="far fa-hand-back-fist" id="player-rock", title="Rock"></i></span>
+                <span><i class="far fa-hand" id="player-paper" title="Paper"></i></span>
+                <span><i class="far fa-hand-scissors" id="player-scissors" title="Scissors"></i></span>
+                <span><i class="far fa-hand-lizard" id="player-lizard" title="Lizard"></i></span>
+                <span><i class="far fa-hand-spock" id="player-spock" title="Spock"></i></span>
+            </div>
+            <!-- Computer Section -->
+
+            <div class="computer">
+                <span>Computer - </span>
+                <span id="computer-score">0</span>
+                <span id="computer-hyphens" hidden>---</span>
+                <span id="computer-selected" hidden></span>
+            </div>
+            <div class="computer-item">
+                <span><i class="far fa-hand-back-fist" id="computer-rock"></i></span>
+                <span><i class="far fa-hand" id="computer-paper"></i></span>
+                <span><i class="far fa-hand-scissors" id="computer-scissors"></i></span>
+                <span><i class="far fa-hand-lizard" id="computer-lizard"></i></span>
+                <span><i class="far fa-hand-spock" id="computer-spock"></i></span>
+            </div>
+            <!-- Refresh Icon -->
+            <i class="fas fa-arrows-rotate" title="Reset"></i>
+            
+            <!-- Text -->
+            <h3></h3>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+:root {
+    --text-font-size: 3vh;
+    --item-size: 8vh;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -5,4 +12,142 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    background: whitesmoke;
+    font-family: Sen, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    height: 80vh;
+    width: auto;
+    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+h1 {
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0;
+    color: white;
+    background: dodgerblue;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Player Section */
+
+.player {
+    margin-top: 30px;
+    font-weight: bold;
+    width: 100%;
+    font-size: var(--text-font-size);
+}
+
+.player-hyphens,
+#player-selected {
+    color: dodgerblue;
+    font-size: var(--text-font-size);
+}
+
+/* Player Items */
+.player-item {
+    color: dodgerblue;
+    font-size: var(--item-size);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.player-item .far:hover {
+    color: purple;
+}
+/* Computer Section */
+.computer {
+    margin-top: 30px;
+    font-weight: bold;
+    width: 100%;
+    font-size: var(--text-font-size);
+}
+
+.computer-hyphens,
+#computer-selected {
+    color: red;
+    font-size: var(--text-font-size);
+}
+
+.computer-item {
+    color: red;
+    font-size: var(--item-size);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+/* Common Items */
+
+.far, .fas {
+    cursor: pointer;
+}
+
+.fas {
+    font-size: var(--text-font-size);
+}
+
+.fas:hover {
+    filter: brightness(150%);
+}
+
+.fa-arrows-rotate {
+    margin-top: 30px;
+    font-size: calc(var(--item-size) / 2);
+}
+
+h3 {
+    margin-top: 30px;
+    letter-spacing: 2px;
+    font-size: calc(var(--item-size) / 1.5);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 575px) {
+    :root {
+        --text-font-size: 3vh;
+        --item-size: 5vh;
+    }
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+    :root {
+        --text-font-size: 2vh;
+        --item-size: 4vh;
+    }
+
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h1 {
+        font-size: 0.67rem;
+    }
 }
